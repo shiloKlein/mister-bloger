@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Blogin</title>
+</head>
+
+<body class="main-layout menu-closed">
+    <div class="main-screen full" onclick="toggleMenu()"></div>
+    <header class="flex align-center space-between full main-layout">
+        <div class="logo">Blogin<span>.</span></div>
+        <nav class="main-nav">
+            <ul class="clean-list flex justify-center">
+                <li class="drop-down-container"onclick="onNavClick(this)">
+                    <a href="#">Journal</a>
+                    <ul class="drop-down clean-list">
+                        <li><a href="#"> item 1</a></li>
+                        <li><a href="#">item 2</a></li>
+                        <li><a href="#">item 3</a></li>
+                        <li><a href="#">item 4</a></li>
+                    </ul>
+                </li>
+                <li onclick="onNavClick(this)">
+                    <a href="#">About</a>
+                </li>
+                <li onclick="onNavClick(this)">
+                    <a href="#">Work</a>
+                </li >
+                <li onclick="onNavClick(this)"">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="btn-menu" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <section class="main-content flex direction-column align-center">
+        <article class="card flex align-center">
+            <div class="preview-img"><img src="./img/Layer_2.png"></div>
+            <section class="preview flex direction-column space-between">
+                <h2>Duis aute irure dolor in
+                    henderit in voluptate.</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                    doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur...</p>
+                <button>Continue Reading </button>
+            </section>
+        </article>
+
+        <article class="card flex align-center">
+            <div class="preview-img"><img src="./img/Layer_3.png"></div>
+            <section class="preview flex direction-column  space-between">
+                <h2>Duis aute irure dolor in
+                    henderit in voluptate.</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                    doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur...</p>
+                <button>Continue Reading </button>
+            </section>
+        </article>
+        <article class="card flex align-center">
+            <div class="preview-img"><img src="./img/Layer_4.png"></div>
+            <section class="preview flex direction-column  space-between">
+                <h2>Duis aute irure dolor in
+                    henderit in voluptate.</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
+                    doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur...</p>
+                <button>Continue Reading </button>
+                <section class="preview flex direction-column align-center space-between">
+
+                </section>
+        </article>
+
+        <div class="page-selector flex space-between">
+            <button><span>←</span> Previous</button>
+            <button>Next <span>→</span></button>
+        </div>
+    </section>
+    <footer class="flex direction-column align-center justify-center space-around full">
+        <div class="logo">Blogin<span>.</span></div>
+        <p>© 2014 Blogin.com - All Rights Reserved - Find more free Templates at Pixelhint.com</p>
+        <section class="social-links flex space-around">
+            <div class="social-logo facebook flex align-center justify-center"><img src="./img/social/facebook.svg"></div>
+            <div class="social-logo twitter flex align-center justify-center" ><img src="./img/social/twitter.svg"></div>
+            <div class="social-logo behance flex align-center justify-center" ><img src="./img/social/behance.svg"></div>
+            <div class="social-logo web flex align-center justify-center"><img src="./img/social/web.svg"></div>
+        </section>
+    </footer>
+
+    <script>
+     function onNavClick(el){ 
+        const listItems = document.querySelectorAll('.clean-list li')
+        listItems.forEach(li => {
+            li.classList.remove('clicked')
+        });
+        el.classList.add('clicked')
+    }
+
+    function toggleMenu(){
+        document.querySelector('.main-layout').classList.toggle('menu-open')
+        document.querySelector('.main-layout').classList.toggle('menu-closed')
+        console.log('toggle');
+    }
+    </script>
+
+
+</body>
+
+</html>
